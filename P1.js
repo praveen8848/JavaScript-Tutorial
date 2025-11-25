@@ -113,5 +113,73 @@ let q = 18;
 let Gcd = gcd(p, q);
 console.log("GCD of "+p+ " and " + q + " is " + Gcd );
 
+console.log();
+
+// Q6: Find SECOND largest number in array (no sorting)
+console.log("Q6: Find SECOND largest number in array (no sorting)");
+let arr  = [10, 20, 30, 40];
+let first = -Infinity;
+let second = -Infinity;
+for(let i = 0; i<arr.length; i++){
+    let num = arr[i];
+    if(num>first){
+        second = first;
+        first = num;
+    }
+    if(num> second && num< first){
+        second = num;
+    }
+}
+console.log(arr);
+console.log("Largest "+first );
+
+console.log("Second Largest:  "+second);
+
+
+
+
+// Q7: Reverse an array manually (without reverse())
+console.log();
+console.log("Q7: Reverse an array manually (without reverse())");
+let s = 0;
+console.log("Nomal Array: "+ arr);
+
+let e = arr.length -1;
+while(s<e){
+    let t = arr[e];
+    arr[e] = arr[s];
+    arr[s] = t;
+    s++;
+    e--;
+}
+console.log("Reversed array: " +arr);
+
+console.log();
+// Q8: Remove duplicates from array (using loops only)
+console.log("Q8: Remove duplicates from array (using loops only)");
+
+let arr1 = [1,2,2,3,1,4,7,5,6,7,6,4,9,9,1,3,10,11,10,8,2];
+let unique = [];
+for(let val of arr1){
+    let flag = true;
+    for(let u of unique){
+        if(u == val){
+            flag = false;
+            break;
+        }
+    }
+    if(flag){
+        unique.push(val);
+    }
+}
+console.log("Duplcate Array " + arr1);
+console.log("This Method is not efficient for large length of Array.");
+
+console.log("After removing duplicate elements: "+unique);
+
+
+
+
+
 
 
