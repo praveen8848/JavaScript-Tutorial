@@ -178,6 +178,38 @@ console.log("This Method is not efficient for large length of Array.");
 console.log("After removing duplicate elements: "+unique);
 
 
+console.log();
+
+// Q9: Sort an array manually (Bubble Sort)
+console.log("Sort an array manually (Bubble Sort)");
+let num = [3,6,1,8,2,34,4,7,5,12];
+console.log("Unsorted Array: " + num);
+
+for(let i = 0; i<num.length; i++){
+    for(let j = 0; j<num.length-1-i; j++){
+        if(num[j]>num[j+1]){
+            let t = num[j+1];
+            num[j+1] = num[j];
+            num[j] = t;
+        }
+    }
+}
+console.log("Sorted Array: " + num);
+console.log();
+// Q10: Rotate array by K positions (right rotation)
+console.log(" Q10: Rotate array by K positions (right rotation)");
+let array = [ 1,2,3,4,5,6];
+console.log("Without Roatation: " + array);
+let k = 3;
+for(let i = 0; i<k; i++){
+    let last = array.pop();
+    array.unshift(last);
+}
+console.log("Rotated right by " + k + " postion: "+ array);
+console.log();
+
+
+
 
 
 
